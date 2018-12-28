@@ -23,12 +23,11 @@ public class Main extends Application {
         Parent root = fxmlLoader.load();
         final Controller controller = fxmlLoader.getController();
         primaryStage.setTitle("Calabash Brothers vs Monsters");
-        Scene scene = new Scene(root, 1000, 1000);
+        Scene scene = new Scene(root, 1200, 1000);
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             public void handle(KeyEvent event) {
                 if(event.getCode() == KeyCode.S)
                 {
-                    //System.out.println("sss");
                     controller.GameStart();
                 }
                 else if(event.getCode() == KeyCode.L){

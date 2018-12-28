@@ -19,6 +19,7 @@ public class Calabash_Scheduler extends Scheduler<CalabashBrother> {
         leader = x;
         grandpa = x;
     }
+    public Calabash_Scheduler(){}
 
     public void init_Soldiers() {
         calabashbrothers.add(CalabashBrother.RED);
@@ -115,13 +116,10 @@ public class Calabash_Scheduler extends Scheduler<CalabashBrother> {
             if (!p.dead)
                 sd.add(p);
         }
-        /*for (CalabashBrother p : sd
-                ) {
-            System.out.print(p.getName());
-        }
-        System.out.println();*/
         Collections.shuffle(sd);
         return sd.get(0);
     }
+
+
 }
 

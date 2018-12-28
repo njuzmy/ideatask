@@ -26,6 +26,7 @@ public class Grandpa extends Leader implements Creature,Runnable{
     public Grandpa(String name){
         this.name = name;
         position = new Position(10,0);
+        dead = false;
         skillUsed = false;
     }
     public void setPosition(Position t){

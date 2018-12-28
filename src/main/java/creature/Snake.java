@@ -68,51 +68,55 @@ public class Snake extends Leader implements Creature{
 
     @Override
     public void check_S_Random_formation(List<Soldier> x, int num, Scorpion scorpion) throws IOException{
-        Formation f = new Formation();
-        BufferedInputFile input;
-        switch(num){
-            case 15:{
-                input = new BufferedInputFile("E:\\zmy\\大三上\\java程序设计\\src\\formation\\henge.txt");
-                input.setIn();
-                f.form_S_Random_formation(x,input,scorpion);                           //直接根据IO画出阵型图
-                break;
+        try {
+            Formation f = new Formation();
+            BufferedInputFile input;
+            switch (num) {
+                case 15: {
+                    input = new BufferedInputFile(System.getProperty("user.dir") +"/src/main/java/formation/henge.txt");
+                    input.setIn();
+                    f.form_S_Random_formation(x, input, scorpion);                           //直接根据IO画出阵型图
+                    break;
+                }
+                case 16: {
+                    input = new BufferedInputFile(System.getProperty("user.dir") +"/src/main/java/formation/Arrow.txt");
+                    input.setIn();
+                    f.form_S_Random_formation(x, input, scorpion);         //直接根据IO画出阵型图
+                    break;
+                }
+                case 17: {
+                    input = new BufferedInputFile(System.getProperty("user.dir")+"/src/main/java/formation/crane.txt");
+                    input.setIn();
+                    f.form_S_Random_formation(x, input, scorpion);         //直接根据IO画出阵型图
+                    break;
+                }
+                case 18: {
+                    input = new BufferedInputFile(System.getProperty("user.dir") +"/src/main/java/formation/scale.txt");
+                    input.setIn();
+                    f.form_S_Random_formation(x, input, scorpion);                           //直接根据IO画出阵型图
+                    break;
+                }
+                case 19: {
+                    input = new BufferedInputFile(System.getProperty("user.dir")+"/src/main/java/formation/door.txt");
+                    input.setIn();
+                    f.form_S_Random_formation(x, input, scorpion);                           //直接根据IO画出阵型图
+                    break;
+                }
+                case 20: {
+                    input = new BufferedInputFile(System.getProperty("user.dir") +"/src/main/java/formation/goose.txt");
+                    input.setIn();
+                    f.form_S_Random_formation(x, input, scorpion);                           //直接根据IO画出阵型图
+                    break;
+                }
+                default: {
+                    input = new BufferedInputFile(System.getProperty("user.dir")+"/src/main/java/formation/moon.txt");
+                    input.setIn();
+                    f.form_S_Random_formation(x, input, scorpion);                           //直接根据IO画出阵型图
+                    break;
+                }
             }
-            case 16:{
-                input = new BufferedInputFile("E:\\zmy\\大三上\\java程序设计\\src\\formation\\Arrow.txt");
-                input.setIn();
-                f.form_S_Random_formation(x,input,scorpion);         //直接根据IO画出阵型图
-                break;
-            }
-            case 17:{
-                input = new BufferedInputFile("E:\\zmy\\大三上\\java程序设计\\src\\formation\\crane.txt");
-                input.setIn();
-                f.form_S_Random_formation(x,input,scorpion);         //直接根据IO画出阵型图
-                break;
-            }
-            case 18:{
-                input = new BufferedInputFile("E:\\zmy\\大三上\\java程序设计\\src\\formation\\scale.txt");
-                input.setIn();
-                f.form_S_Random_formation(x,input,scorpion);                           //直接根据IO画出阵型图
-                break;
-            }
-            case 19:{
-                input = new BufferedInputFile("E:\\zmy\\大三上\\java程序设计\\src\\formation\\door.txt");
-                input.setIn();
-                f.form_S_Random_formation(x,input,scorpion);                           //直接根据IO画出阵型图
-                break;
-            }
-            case 20:{
-                input = new BufferedInputFile("E:\\zmy\\大三上\\java程序设计\\src\\formation\\goose.txt");
-                input.setIn();
-                f.form_S_Random_formation(x,input,scorpion);                           //直接根据IO画出阵型图
-                break;
-            }
-            default:{
-                input = new BufferedInputFile("E:\\zmy\\大三上\\java程序设计\\src\\formation\\moon.txt");
-                input.setIn();
-                f.form_S_Random_formation(x,input,scorpion);                           //直接根据IO画出阵型图
-                break;
-            }
+        }catch (IOException e){
+            e.printStackTrace();
         }
     }
 

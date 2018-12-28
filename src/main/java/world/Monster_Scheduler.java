@@ -24,17 +24,104 @@ public class Monster_Scheduler extends Scheduler<Soldier> {
         return scorpion;
     }
 
+    public Monster_Scheduler(){}
+
     public void init_Soldiers(){
         Random p = new Random();
         int num = p.nextInt(6) + 15;
         soldiers_num = num;
-        //System.out.println(num);
         for(int i = 0; i<num;i++) {
             Soldier so = new Soldier(("soldiers" + i).toString(), i);
             so.dead = false;
             soldiers.add(so);
         }
         scorpion.dead = false;
+    }
+
+    public void init_Soldiers(String name) throws IOException{
+        switch (name) {
+            case "arrow":{
+                for(int i = 0; i < 16; i++) {
+                    Soldier so = new Soldier(("soldiers" + i).toString(), i);
+                    so.dead = false;
+                    soldiers.add(so);
+                }
+                soldiers_num = 16;
+                scorpion.dead = false;
+                leader.check_S_Random_formation (soldiers,16,scorpion);
+                break;
+            }
+            case "henge":{
+                for(int i = 0; i < 15; i++) {
+                    Soldier so = new Soldier(("soldiers" + i).toString(), i);
+                    so.dead = false;
+                    soldiers.add(so);
+                }
+                soldiers_num = 15;
+                scorpion.dead = false;
+                leader.check_S_Random_formation (soldiers,15,scorpion);
+                break;
+            }
+            case "crane":{
+                for(int i = 0; i < 17; i++) {
+                    Soldier so = new Soldier(("soldiers" + i).toString(), i);
+                    so.dead = false;
+                    soldiers.add(so);
+                }
+                soldiers_num = 17;
+                scorpion.dead = false;
+                leader.check_S_Random_formation (soldiers,17,scorpion);
+                break;
+            }
+            case "scale":{
+                for(int i = 0; i < 18; i++) {
+                    Soldier so = new Soldier(("soldiers" + i).toString(), i);
+                    so.dead = false;
+                    soldiers.add(so);
+                }
+                soldiers_num = 18;
+                scorpion.dead = false;
+                leader.check_S_Random_formation (soldiers,soldiers_num,scorpion);
+                break;
+            }
+            case "door":{
+                for(int i = 0; i < 19; i++) {
+                    Soldier so = new Soldier(("soldiers" + i).toString(), i);
+                    so.dead = false;
+                    soldiers.add(so);
+                }
+                soldiers_num = 19;
+                scorpion.dead = false;
+                leader.check_S_Random_formation (soldiers,soldiers_num,scorpion);
+                break;
+            }
+            case "goose":{
+                for(int i = 0; i < 20; i++) {
+                    Soldier so = new Soldier(("soldiers" + i).toString(), i);
+                    so.dead = false;
+                    soldiers.add(so);
+                }
+                soldiers_num = 20;
+                scorpion.dead = false;
+                leader.check_S_Random_formation (soldiers,soldiers_num,scorpion);
+                break;
+            }
+            case "moon15":{
+                for(int i = 0; i < 22; i++) {
+                    Soldier so = new Soldier(("soldiers" + i).toString(), i);
+                    so.dead = false;
+                    soldiers.add(so);
+                }
+                soldiers_num = 22;
+                scorpion.dead = false;
+                leader.check_S_Random_formation (soldiers,soldiers_num,scorpion);
+                break;
+            }
+        }
+    }
+
+    public int getSoldiers_num(){
+        return soldiers_num;
     }
 
     public List<Soldier> getList(){              //返回士兵list
@@ -78,11 +165,6 @@ public class Monster_Scheduler extends Scheduler<Soldier> {
             if(!p.dead)
                 sd.add(p);
         }
-        /*for (Soldier p:sd
-             ) {
-            System.out.print(p.getName());
-        }
-        System.out.println();*/
         Collections.shuffle(sd);
         return sd.get(0);
     }

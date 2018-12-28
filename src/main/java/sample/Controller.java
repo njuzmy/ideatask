@@ -28,6 +28,8 @@ public class Controller {
     private GraphicsContext gc2;
     private GraphicsContext gc3;
     private Stage primaryStage;
+    private boolean setFormation;
+    private String name;
 
     private double gapX,gapY;
 
@@ -126,13 +128,18 @@ public class Controller {
     }
 
     public void GameStart(){
+        System.out.println("button");
         initCanvas();
         for(int i = 0;i<20;i++)
             for(int j = 0; j < 20; j++)
                 clearUnit(i,j);
         try {
-            Open_World.initBattle(this);
-            //Open_World.RunGame();
+            if(setFormation == false)
+                Open_World.initBattle(this,1,"tt");
+            else{
+                Open_World.initBattle(this,2,name);
+                //Open_World.paint();
+            }
         }catch (Exception e){}
     }
 
@@ -156,4 +163,38 @@ public class Controller {
         else
             System.out.println("Error while choosing file\n");
     }
+
+    public void Arrow(){
+        setFormation = true;
+        name = "arrow";
+    }
+
+    public void henge(){
+        setFormation = true;
+        name = "henge";
+    }
+
+    public void crane(){
+        setFormation = true;
+        name = "crane";
+    }
+
+    public void scale(){
+        setFormation = true;
+        name = "scale";
+    }
+    public void door(){
+        setFormation = true;
+        name = "door";
+    }
+
+    public void goose(){
+        setFormation = true;
+        name = "goose";
+    }
+    public void moon15(){
+        setFormation = true;
+        name = "moon15";
+    }
+
 }

@@ -23,46 +23,32 @@ public class Open_World {
     private static ExecutorService executorService;
     private static Controller controller;
     public static String filename;
-    public static void initBattle(Controller controller1) throws IOException {
+    private static Battlefield battlefield;
+    public static void initBattle(Controller controller1, int t,String formationname) throws IOException {
         controller = controller1;
         Grandpa grandpa = new Grandpa("grandpa");
         Snake snake = new Snake("snake");             //两个阵营的头
         Calabash_Scheduler calabash_scheduler = new Calabash_Scheduler(grandpa);
         Monster_Scheduler monster_scheduler = new Monster_Scheduler(snake);    //两个阵营的调度者
-        Battlefield battlefield = new Battlefield(BATTLEFIELD_ROW, BATTLEFIELD_COLUMN, calabash_scheduler, monster_scheduler);
+        battlefield = new Battlefield(BATTLEFIELD_ROW, BATTLEFIELD_COLUMN, calabash_scheduler, monster_scheduler);
         battlefield.clear();
         Message message = new Message(battlefield);
         executorService = Executors.newCachedThreadPool();
 
         calabash_scheduler.init_Soldiers();
-        //calabash_scheduler.shuffle();
-        //calabash_scheduler.display_name();
-        //calabash_scheduler.sortbyRank();
-        //calabash_scheduler.shuffle();
-        //calabash_scheduler.display_color();
-        //calabash_scheduler.sortbyColor();                //homework1
 
-        monster_scheduler.init_Soldiers();
-        //monster_scheduler.shuffle();
-        //monster_scheduler.display();
 
         calabash_scheduler.setFormation("Line");          //指定队型
 
-        //monster_scheduler.setFormation("Goose");
-        monster_scheduler.set_random_Formation();           //随机队型，由IO实现
-        for (int i = 0; i <= 6; i++) {
-            String name = "hlw" + i;
-            paintCreature(name, battlefield.getCS().getList().get(i).getPosition().get_x(), battlefield.getCS().getList().get(i).getPosition().get_y());
+        if(t == 1) {
+            monster_scheduler.init_Soldiers();
+            monster_scheduler.set_random_Formation();           //随机队型，由IO实现
         }
-        for (int i = 0; i < battlefield.getMS().getList().size() - 1; i++) {
-            //System.out.println("i: "+ battlefield.getMS().getList().get(i).getPosition().get_x() + battlefield.getMS().getList().get(i).getPosition().get_y());
-            paintCreature("soldier", battlefield.getMS().getList().get(i).getPosition().get_x(), battlefield.getMS().getList().get(i).getPosition().get_y());
+        else {
+            monster_scheduler.init_Soldiers(formationname);
         }
 
-        paintCreature("scorpion",battlefield.getMS().getScorpion().getPosition().get_x(),battlefield.getMS().getScorpion().getPosition().get_y());
-        paintCreature("grandpa",battlefield.getCS().getGrandpa().getPosition().get_x(),battlefield.getCS().getGrandpa().getPosition().get_y());
-
-        //paintCreature();
+        paint();
         try{
             Document documented = DocumentHelper.createDocument();
             Element rootElement = documented.addElement("root");
@@ -133,8 +119,21 @@ public class Open_World {
         executorService.execute(new Thread(monster_scheduler.getScorpion()));
         executorService.execute(new Thread(calabash_scheduler.getGrandpa()));
         executorService.shutdown();
+    }
 
-        //battlefield.display();
+    public static void paint(){
+        for (int i = 0; i <= 6; i++) {
+            String name = "hlw" + i;
+            paintCreature(name, battlefield.getCS().getList().get(i).getPosition().get_x(), battlefield.getCS().getList().get(i).getPosition().get_y());
+        }
+        for (int i = 0; i < battlefield.getMS().getList().size() - 1; i++) {
+            System.out.println("i: "+ battlefield.getMS().getList().get(i).getPosition().get_x() + battlefield.getMS().getList().get(i).getPosition().get_y());
+            paintCreature("soldier", battlefield.getMS().getList().get(i).getPosition().get_x(), battlefield.getMS().getList().get(i).getPosition().get_y());
+        }
+
+
+        paintCreature("scorpion",battlefield.getMS().getScorpion().getPosition().get_x(),battlefield.getMS().getScorpion().getPosition().get_y());
+        paintCreature("grandpa",battlefield.getCS().getGrandpa().getPosition().get_x(),battlefield.getCS().getGrandpa().getPosition().get_y());
     }
 
     public static void paintCreature(String name,int x,int y){

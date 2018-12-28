@@ -53,7 +53,7 @@ public class Message {
         return calabashBrother;
     }
 
-    static public Position decideNext(int j) {
+    static public synchronized Position decideNext(int j) {
         Position position = new Position(0, 0);
         if (j == 1) {
             position.setPosition(cb.getPosition().get_x(),cb.getPosition().get_y());
@@ -163,11 +163,10 @@ public class Message {
     static synchronized public boolean calabash(CalabashBrother CB, Soldier soldier1, Scorpion scorpion1, int num) {
         if (num == 1) {
             cb = CB;
-            //System.out.println(cb.getName() + "starts :" + cb.dead);
+            System.out.println(cb.getName() + "starts :" + cb.dead);
             if (cb.dead) {
                 if(cb.getNo() == 1)
                     return true;
-                //else
                 return false;
             }
             if (battlefield.MsDeadAll()) {
@@ -212,6 +211,7 @@ public class Message {
                     } else if (battlefield.isScorpion(p)) {
                         Scorpion scorpion = battlefield.getPositionScorpion(p);
                         if (!ifDead()) {
+                            System.out.println("here");
                             Open_World.clearLand(cb.getPosition().get_x(), cb.getPosition().get_y());
                             scorpion.dead = true;
                             System.out.println(cb.getName() + "defeat" + scorpion.getName());
@@ -219,10 +219,11 @@ public class Message {
                             writeMoveXML(cb.getPosition(),p,name);
                             writeDefeatScopionXML(cb,scorpion,1,1,1);
                             cb.setPosition(p);                   //击败位置上的敌人后占领位置
-                            Open_World.clearLand(p.get_x(), p.get_y());
+                            //Open_World.clearLand(p.get_x(), p.get_y());
                             Open_World.paintCreature(name, p.get_x(), p.get_y());
                             Open_World.paintRemains("scorpion", p.get_x(), p.get_y());
                         } else {
+                            System.out.println("here1");
                             Open_World.clearLand(cb.getPosition().get_x(), cb.getPosition().get_y());
                             cb.dead = true;
                             System.out.println(scorpion.getName() + "defeat" + cb.getName());
@@ -230,6 +231,7 @@ public class Message {
                             writeMoveXML(cb.getPosition(),p,name);
                             writeDefeatScopionXML(cb,scorpion,1,1,2);
                             cb.setPosition(p);
+                            System.out.println(name);
                             Open_World.paintRemains(name, p.get_x(), p.get_y());
                         }
                     }
@@ -237,7 +239,6 @@ public class Message {
             }
         } else if(num == 2){
             s = soldier1;
-            //System.out.println(s.getName() + "starts :" + battlefield.CsDeadAll());
             if (s.dead) {
                 return false;
             }
@@ -340,8 +341,10 @@ public class Message {
                     System.out.println("grandpa start");
                     String name = "hlw0";
                     LiveXML(battlefield.getCS().getList().get(0).getPosition());
+                    Open_World.paintCreature("timg",10,1);
                     Open_World.clearLand(battlefield.getCS().getList().get(0).getPosition().get_x(), battlefield.getCS().getList().get(0).getPosition().get_y());
                     Open_World.paintCreature(name, battlefield.getCS().getList().get(0).getPosition().get_x(), battlefield.getCS().getList().get(0).getPosition().get_y());
+
                     writeMoveXML(battlefield.getCS().getList().get(0).getPosition(), battlefield.getCS().getList().get(0).getPosition(),name);
                     battlefield.getCS().getGrandpa().setskill();
                     battlefield.setField_calabash();
