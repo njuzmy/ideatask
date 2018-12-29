@@ -1,63 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ae16cd00-48af-4c50-9def-24a350be8b5f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/HuluwaTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/RandomTest.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/creature/CalabashBrother.java" afterPath="$PROJECT_DIR$/src/main/java/creature/CalabashBrother.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/creature/Grandpa.java" afterPath="$PROJECT_DIR$/src/main/java/creature/Grandpa.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/creature/Snake.java" afterPath="$PROJECT_DIR$/src/main/java/creature/Snake.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/info/2018-12-26-21-01-43.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/info/2018-12-26-21-03-05.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/info/2018-12-26-21-09-29.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/info/2018-12-26-21-11-34.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/info/2018-12-26-22-12-13.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Main.java" afterPath="$PROJECT_DIR$/src/main/java/sample/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/background.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/background2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/end_tip.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/grandpa.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/grandpa.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/hlw0.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/hlw0_dead.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/hlw1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/hlw1_dead.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/hlw2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/hlw2_dead.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/hlw3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/hlw3_dead.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/hlw4.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/hlw4_dead.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/hlw5.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/hlw5_dead.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/hlw6.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/hlw6_dead.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/hlw_win.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/monster_win.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/scorpion.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/scorpion_dead.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/snake.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/snake_dead.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/soldier.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/soldier_dead.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/resources/start_tip.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/sample.fxml" afterPath="$PROJECT_DIR$/src/main/java/sample/sample.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/world/Calabash_Scheduler.java" afterPath="$PROJECT_DIR$/src/main/java/world/Calabash_Scheduler.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/world/Message.java" afterPath="$PROJECT_DIR$/src/main/java/world/Message.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/world/Monster_Scheduler.java" afterPath="$PROJECT_DIR$/src/main/java/world/Monster_Scheduler.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/world/Open_World.java" afterPath="$PROJECT_DIR$/src/main/java/world/Open_World.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/world/Replay.java" afterPath="$PROJECT_DIR$/src/main/java/world/Replay.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/creature/CalabashBrother.class" afterPath="$PROJECT_DIR$/target/classes/creature/CalabashBrother.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/creature/Rank.class" afterPath="$PROJECT_DIR$/target/classes/creature/Rank.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/creature/Snake.class" afterPath="$PROJECT_DIR$/target/classes/creature/Snake.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/sample.fxml" afterPath="$PROJECT_DIR$/target/classes/sample/sample.fxml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/world/Calabash_Scheduler.class" afterPath="$PROJECT_DIR$/target/classes/world/Calabash_Scheduler.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/world/Monster_Scheduler.class" afterPath="$PROJECT_DIR$/target/classes/world/Monster_Scheduler.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/world/Replay.class" afterPath="$PROJECT_DIR$/target/classes/world/Replay.class" />
-    </list>
+    <list default="true" id="ae16cd00-48af-4c50-9def-24a350be8b5f" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -127,8 +71,8 @@
       <file leaf-file-name="Message.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/world/Message.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="214" column="57" lean-forward="false" selection-start-line="214" selection-start-column="57" selection-end-line="214" selection-end-column="57" />
+            <state relative-caret-position="36">
+              <caret line="162" column="22" lean-forward="true" selection-start-line="162" selection-start-column="22" selection-end-line="162" selection-end-column="22" />
               <folding>
                 <element signature="method#Scorpion#0;class#Message#0" expanded="false" />
                 <element signature="method#writeWinXML#0;class#Message#0" expanded="false" />
@@ -664,7 +608,7 @@
       <option name="presentableId" value="Default" />
       <updated>1545822822381</updated>
       <workItem from="1545822827795" duration="19772000" />
-      <workItem from="1545980047950" duration="12525000" />
+      <workItem from="1545980047950" duration="12572000" />
     </task>
     <servers />
   </component>
@@ -683,7 +627,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32297000" />
+    <option name="totallyTimeSpent" value="32344000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -1257,8 +1201,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/world/Message.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="214" column="57" lean-forward="false" selection-start-line="214" selection-start-column="57" selection-end-line="214" selection-end-column="57" />
+        <state relative-caret-position="36">
+          <caret line="162" column="22" lean-forward="true" selection-start-line="162" selection-start-column="22" selection-end-line="162" selection-end-column="22" />
           <folding>
             <element signature="method#Scorpion#0;class#Message#0" expanded="false" />
             <element signature="method#writeWinXML#0;class#Message#0" expanded="false" />
